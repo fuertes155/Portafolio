@@ -6,6 +6,7 @@ type Proyecto = {
   tecnologias: string[];
   demo: string;
   github: string;
+  imagen: string; // Añadida propiedad para la imagen
 };
 
 const proyectos: Proyecto[] = [
@@ -15,6 +16,7 @@ const proyectos: Proyecto[] = [
     tecnologias: ["Next.js", "React", "Tailwind CSS", "Node.js"],
     demo: "https://tudemo.com/ecommerce",      // Cambia por tu link real
     github: "https://github.com/TU_USUARIO/tu-ecommerce", // Cambia por tu repo real
+    imagen: "/imagen1.png", // Imagen desde public
   },
   {
     titulo: "Dashboard Administrativo",
@@ -22,6 +24,7 @@ const proyectos: Proyecto[] = [
     tecnologias: ["React", "TypeScript", "Material UI", "Firebase"],
     demo: "https://tudemo.com/dashboard",      // Cambia por tu link real
     github: "https://github.com/TU_USUARIO/tu-dashboard", // Cambia por tu repo real
+    imagen: "/imagen2.png", // Imagen desde public
   },
   {
     titulo: "Aplicación Móvil de Fitness",
@@ -29,6 +32,7 @@ const proyectos: Proyecto[] = [
     tecnologias: ["React Native", "Redux", "Express", "MongoDB"],
     demo: "https://tudemo.com/fitness",        // Cambia por tu link real
     github: "https://github.com/TU_USUARIO/tu-fitness-app", // Cambia por tu repo real
+    imagen: "/imagen3.png", // Imagen desde public
   },
 ];
 
@@ -79,18 +83,16 @@ export default function Proyectos() {
               alignItems: "stretch"
             }}
           >
-            {/* Imagen simulada */}
-            <div style={{
-              backgroundColor: "#e5e5e5",
-              height: "180px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center"
-            }}>
-              <svg width={48} height={48} fill="#a1a1aa" viewBox="0 0 24 24">
-                <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0-2C8.13 5 5 8.13 5 12c0 3.87 3.13 7 7 7s7-3.13 7-7c0-3.87-3.13-7-7-7z"/>
-              </svg>
-            </div>
+            {/* Reemplazado el placeholder con la imagen */}
+            <img
+              src={proy.imagen}
+              alt={proy.titulo}
+              style={{
+                width: "100%",
+                height: "180px",
+                objectFit: "cover",
+              }}
+            />
             <div style={{ padding: "1.6rem 1.5rem 1.4rem 1.5rem", flexGrow: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
               <div>
                 <h3 style={{ fontSize: "1.3rem", fontWeight: 700, marginBottom: "0.6rem", color: "#fff" }}>
