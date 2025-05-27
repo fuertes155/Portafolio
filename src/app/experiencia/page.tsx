@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react";
 import { Calendar, MapPin } from "lucide-react"
 
 type Experiencia = {
@@ -35,7 +36,23 @@ const experiencias: Experiencia[] = [
   },
 ];
 
+const experienciasExtra: Experiencia[] = [
+  {
+    puesto: "Desarrollador Web Freelance",
+    empresa: "Proyectos Independientes",
+    fecha: "Enero 2016 - Febrero 2017",
+    ubicacion: "Remoto",
+    descripcion:
+      "Desarrollo de sitios web para pequeñas empresas utilizando WordPress, HTML y CSS. Gestión directa con clientes y entrega de soluciones personalizadas.",
+    tecnologias: ["WordPress", "HTML5", "CSS3", "PHP"],
+    empresaUrl: "#",
+  },
+];
+
 export default function Experiencia() {
+  const [verMas, setVerMas] = useState(false);
+  const experienciasAMostrar = verMas ? [...experiencias, ...experienciasExtra] : experiencias;
+
   return (
     <section
       id="experiencia"
@@ -81,7 +98,7 @@ export default function Experiencia() {
           }}
         />
         <div style={{ display: "flex", flexDirection: "column", gap: "3.3rem", position: "relative" }}>
-          {experiencias.map((exp, idx) => (
+          {experienciasAMostrar.map((exp, idx) => (
             <div key={idx} style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", position: "relative", zIndex: 1 }}>
               {/* Punto de la línea */}
               <div style={{ width: 90, display: "flex", justifyContent: "center", position: "relative" }}>
@@ -154,6 +171,26 @@ export default function Experiencia() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Botón Ver Más */}
+        <div style={{ marginTop: "3rem", textAlign: "center" }}>
+          <button
+            onClick={() => setVerMas(!verMas)}
+            style={{
+              padding: "0.75rem 1.5rem",
+              background: "var(--color-primary)",
+              color: "var(--color-bg-card, #232335)",
+              fontWeight: 700,
+              borderRadius: "0.6rem",
+              fontSize: "1rem",
+              border: "none",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+            }}
+          >
+            {verMas ? "Ver menos" : "Ver más experiencias"}
+          </button>
         </div>
       </div>
     </section>
