@@ -1,0 +1,151 @@
+"use client"
+
+export default function SobreMi() {
+  return (
+    <section
+      id="sobre-mi"
+      style={{
+        minHeight: "100vh",
+        background: "var(--color-background)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "4rem 1rem 2rem 1rem",
+      }}
+    >
+      <h2
+        style={{
+          fontSize: "2.8rem",
+          fontWeight: 800,
+          color: "var(--color-primary)",
+          marginBottom: "2.5rem",
+          letterSpacing: "-1.5px",
+        }}
+      >
+        Sobre Mí
+      </h2>
+      <div
+        style={{
+          background: "var(--color-bg-card, #232335)",
+          borderRadius: "1.2rem",
+          boxShadow: "0 4px 30px rgba(0,0,0,0.10)",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          width: "100%",
+          maxWidth: "900px",
+          padding: "2.5rem 2rem",
+          gap: "2.5rem",
+          flexWrap: "wrap",
+        }}
+      >
+        {/* Imagen de perfil */}
+        <div style={{
+          flex: "0 0 170px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center"
+        }}>
+          <div style={{
+            width: "170px",
+            height: "170px",
+            borderRadius: "50%",
+            background: "linear-gradient(135deg, var(--color-primary) 70%, #232335 100%)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: "1rem",
+            border: "4px solid var(--color-bg-card, #232335)"
+          }}>
+            {/* Cambia la ruta de la imagen cuando la tengas */}
+            <img
+              src="/profile.jpg"
+              alt="Eval Samuel Molina"
+              style={{
+                width: "150px",
+                height: "150px",
+                objectFit: "cover",
+                borderRadius: "50%",
+                border: "3.5px solid var(--color-background)"
+              }}
+              onError={e => (e.currentTarget.src = "https://ui-avatars.com/api/?name=Eval+Samuel+Molina&background=a78bfa&color=fff&size=150")}
+            />
+          </div>
+          <span style={{ fontSize: "1rem", color: "var(--color-primary)", fontWeight: 700 }}>Eval Samuel Molina Fuertes</span>
+        </div>
+        {/* Texto e info */}
+        <div style={{
+          flex: 1,
+          minWidth: "240px",
+          color: "var(--color-text)",
+        }}>
+          <h3 style={{
+            fontWeight: 700,
+            fontSize: "1.35rem",
+            color: "var(--color-primary)",
+            marginBottom: "0.8rem",
+            letterSpacing: "-0.6px"
+          }}>¿Quién soy?</h3>
+          <p style={{ color: "var(--color-muted)", marginBottom: "1rem", fontSize: "1.08rem", lineHeight: 1.7 }}>
+            Soy <b>Eval Samuel Molina Fuertes</b>, Ingeniero de Software apasionado por el desarrollo web y la creación de soluciones tecnológicas modernas.
+            Me especializo en <b>React</b>, <b>Next.js</b> y <b>Tailwind CSS</b>, y disfruto aprendiendo nuevas tecnologías para resolver problemas reales.
+          </p>
+          <p style={{ color: "var(--color-muted)", marginBottom: "1.1rem", fontSize: "1.08rem" }}>
+            Destaco por mi creatividad, atención al detalle y habilidades en diseño UI/UX. Me encanta trabajar en equipo, colaborar y liderar proyectos que impacten positivamente en las personas.
+          </p>
+          <div style={{ marginBottom: "1.6rem" }}>
+            <span style={{ color: "var(--color-primary)", fontWeight: 600, fontSize: "1.01rem" }}>Habilidades:</span>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.7rem", marginTop: "0.7rem" }}>
+              {["JavaScript", "React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "UI/UX"].map(skill => (
+                <span key={skill}
+                  style={{
+                    background: "var(--color-primary)",
+                    color: "#232335",
+                    borderRadius: "0.45rem",
+                    padding: "0.35rem 1.05rem",
+                    fontSize: "0.93rem",
+                    fontWeight: 700,
+                  }}
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div style={{ display: "flex", gap: "1.1rem" }}>
+            <a
+              href="/CV_Eval_Samuel_Molina.pdf"
+              download
+              style={{
+                background: "var(--color-primary)",
+                color: "var(--color-text)",
+                border: "none",
+                borderRadius: "0.4rem",
+                padding: "0.7rem 2.1rem",
+                fontWeight: 700,
+                fontSize: "1rem",
+                textDecoration: "none",
+                transition: "background 0.2s"
+              }}
+            >Descargar CV</a>
+            <a
+              href="/contacto"
+              style={{
+                background: "transparent",
+                color: "var(--color-primary)",
+                border: "2px solid var(--color-primary)",
+                borderRadius: "0.4rem",
+                padding: "0.7rem 2.1rem",
+                fontWeight: 700,
+                fontSize: "1rem",
+                textDecoration: "none",
+                transition: "background 0.2s"
+              }}
+            >Contáctame</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
