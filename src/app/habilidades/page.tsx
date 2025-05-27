@@ -1,11 +1,11 @@
 "use client"
 
 const tecnicas = [
-  { nombre: "HTML/CSS", porcentaje: 95 },
-  { nombre: "JavaScript", porcentaje: 90 },
-  { nombre: "React", porcentaje: 85 },
-  { nombre: "Next.js", porcentaje: 80 },
-  { nombre: "TypeScript", porcentaje: 75 },
+  { nombre: "HTML/CSS", porcentaje: 40 },
+  { nombre: "JavaScript", porcentaje: 30 },
+  { nombre: "React", porcentaje: 65 },
+  { nombre: "Next.js", porcentaje: 50 },
+  { nombre: "TypeScript", porcentaje: 55 },
 ];
 
 const blandas = [
