@@ -88,8 +88,7 @@ export default function SobreMi() {
             letterSpacing: "-0.6px"
           }}>¿Quién soy?</h3>
           <p style={{ color: "var(--color-muted)", marginBottom: "1rem", fontSize: "1.08rem", lineHeight: 1.7 }}>
-            Soy <b>Eval Samuel Molina Fuertes</b>, Ingeniero de Software apasionado por el desarrollo web y la creación de soluciones tecnológicas modernas.
-            Me especializo en <b>React</b>, <b>Next.js</b> y <b>Tailwind CSS</b>, y disfruto aprendiendo nuevas tecnologías para resolver problemas reales.
+            Soy <b>Eval Samuel Molina Fuertes</b>, estudiante de Ingeniería de Software con una gran pasión por el desarrollo web y el diseño de experiencias intuitivas. Me gusta resolver problemas reales con tecnología y siempre busco aprender algo nuevo cada día.
           </p>
           <p style={{ color: "var(--color-muted)", marginBottom: "1.1rem", fontSize: "1.08rem" }}>
             Destaco por mi creatividad, atención al detalle y habilidades en diseño UI/UX. Me encanta trabajar en equipo, colaborar y liderar proyectos que impacten positivamente en las personas.
@@ -112,37 +111,6 @@ export default function SobreMi() {
                 </span>
               ))}
             </div>
-          </div>
-          <div style={{ display: "flex", gap: "1.1rem" }}>
-            <a
-              href="/CV_Eval_Samuel_Molina.pdf"
-              download
-              style={{
-                background: "var(--color-primary)",
-                color: "var(--color-text)",
-                border: "none",
-                borderRadius: "0.4rem",
-                padding: "0.7rem 2.1rem",
-                fontWeight: 700,
-                fontSize: "1rem",
-                textDecoration: "none",
-                transition: "background 0.2s"
-              }}
-            >Descargar CV</a>
-            <a
-              href="/contacto"
-              style={{
-                background: "transparent",
-                color: "var(--color-primary)",
-                border: "2px solid var(--color-primary)",
-                borderRadius: "0.4rem",
-                padding: "0.7rem 2.1rem",
-                fontWeight: 700,
-                fontSize: "1rem",
-                textDecoration: "none",
-                transition: "background 0.2s"
-              }}
-            >Contáctame</a>
           </div>
         </div>
       </div>
