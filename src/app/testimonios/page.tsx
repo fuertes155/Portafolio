@@ -1,184 +1,103 @@
-"use client"
+"use client";
 
-import { Calendar, MapPin } from "lucide-react"
-
-type Experiencia = {
-  puesto: string;
-  empresa: string;
-  fecha: string;
-  ubicacion: string;
-  descripcion: string;
-  tecnologias: string[];
-  empresaUrl?: string;
-};
-
-const experiencias: Experiencia[] = [
+const testimonios = [
   {
-    puesto: "Ingeniero de Software Senior",
-    empresa: "Empresa XYZ",
-    fecha: "Enero 2020 - Presente",
-    ubicacion: "Madrid, España",
-    descripcion:
-      "Desarrollo de aplicaciones web utilizando React, Next.js y Node.js. Liderazgo de equipo de desarrollo frontend y mentorización de desarrolladores junior.",
-    tecnologias: ["React", "Next.js", "Node.js", "TypeScript", "GraphQL"],
-    empresaUrl: "#",
+    nombre: "Laura Rodríguez",
+    cargo: "CEO en Creativa Studio",
+    mensaje:
+      "Samuel es un desarrollador excepcional. Su atención al detalle y compromiso con la calidad hicieron que nuestro proyecto fuera un éxito.",
   },
   {
-    puesto: "Desarrollador Frontend",
-    empresa: "Agencia Digital ABC",
-    fecha: "Marzo 2017 - Diciembre 2019",
-    ubicacion: "Barcelona, España",
-    descripcion:
-      "Creación de interfaces de usuario para clientes de diversos sectores. Colaboración con diseñadores UX/UI para implementar diseños responsivos.",
-    tecnologias: ["JavaScript", "React", "CSS3", "SASS", "Webpack"],
-    empresaUrl: "#",
+    nombre: "Carlos Gómez",
+    cargo: "Gerente de Tecnología en InnovaTech",
+    mensaje:
+      "Trabajar con Samuel fue una experiencia excelente. Siempre aporta soluciones efectivas y es muy profesional.",
+  },
+  {
+    nombre: "Ana Torres",
+    cargo: "Líder de Producto en DigitalSoft",
+    mensaje:
+      "Tiene un gran talento para el diseño y desarrollo de interfaces. Sin duda volveré a trabajar con él en el futuro.",
+  },
+  {
+    nombre: "Mariana López",
+    cargo: "Project Manager en SoftTech",
+    mensaje:
+      "Samuel demostró una gran capacidad para resolver problemas técnicos complejos y siempre entregó resultados a tiempo. Su ética de trabajo es impecable.",
+  },
+  {
+    nombre: "Daniel Herrera",
+    cargo: "Diseñador UX/UI en Creatix",
+    mensaje:
+      "Colaborar con Samuel fue un verdadero placer. Tiene una excelente comunicación y una visión clara sobre la experiencia del usuario.",
+  },
+  {
+    nombre: "Valentina Ruiz",
+    cargo: "CTO en AlphaDev",
+    mensaje:
+      "Samuel se integró rápidamente al equipo y aportó ideas innovadoras desde el primer día. Lo recomiendo ampliamente para cualquier proyecto de desarrollo web.",
   },
 ];
 
-export default function Experiencia() {
+export default function Testimonios() {
   return (
     <section
-      id="experiencia"
+      id="testimonios"
       style={{
+        padding: "4rem 1rem",
+        background: "#1e1e25",
+        color: "var(--color-text)",
+        textAlign: "center",
         minHeight: "100vh",
-        padding: "4rem 1rem 2rem",
-        background: "linear-gradient(to bottom right, #181824, #232335, #181824)",
-        color: "#fff",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
       }}
     >
       <h2
         style={{
-          fontSize: "2.5rem",
+          fontSize: "2.4rem",
           fontWeight: 800,
-          color: "#a78bfa",
+          color: "var(--color-primary)",
           marginBottom: "2.5rem",
-          letterSpacing: "-1.5px",
-          textAlign: "center",
         }}
       >
-        Mi Experiencia
+        Testimonios
       </h2>
+
       <div
         style={{
-          width: "100%",
-          maxWidth: 950,
-          position: "relative",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gap: "2rem",
+          maxWidth: "1000px",
+          margin: "0 auto",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            left: 30,
-            top: 0,
-            bottom: 0,
-            width: 4,
-            background: "linear-gradient(to bottom, #a78bfa, #232335)",
-            borderRadius: 8,
-            zIndex: 0,
-          }}
-        />
-        <div style={{ display: "flex", flexDirection: "column", gap: "3rem", position: "relative" }}>
-          {experiencias.map((exp, idx) => (
-            <div
-              key={idx}
+        {testimonios.map((t, i) => (
+          <div
+            key={i}
+            style={{
+              background: "#232335",
+              padding: "2rem",
+              borderRadius: "1rem",
+              boxShadow: "0 6px 20px rgba(0,0,0,0.12)",
+              textAlign: "left",
+            }}
+          >
+            <p
               style={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-                alignItems: "flex-start",
-                position: "relative",
-                zIndex: 1,
+                fontStyle: "italic",
+                marginBottom: "1.2rem",
+                color: "#d4d4d8",
+                lineHeight: "1.6",
               }}
             >
-              <div
-                style={{
-                  width: 90,
-                  display: "flex",
-                  justifyContent: "center",
-                  position: "relative",
-                }}
-              >
-                <div
-                  style={{
-                    width: 18,
-                    height: 18,
-                    borderRadius: "50%",
-                    background: "#a78bfa",
-                    border: "3px solid #232335",
-                    position: "absolute",
-                    top: 12,
-                  }}
-                />
-              </div>
-              <div
-                style={{
-                  background: "#313543",
-                  borderRadius: "0.85rem",
-                  boxShadow: "0 4px 28px rgba(40,30,90,0.15)",
-                  padding: "2.1rem 2rem 1.6rem 2rem",
-                  flex: 1,
-                  minWidth: 280,
-                }}
-              >
-                <h3 style={{ fontSize: "1.4rem", fontWeight: 700, marginBottom: 5 }}>{exp.puesto}</h3>
-                <a
-                  href={exp.empresaUrl || "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    color: "#a78bfa",
-                    fontWeight: 600,
-                    fontSize: "1.12rem",
-                    textDecoration: "none",
-                    marginBottom: 8,
-                    display: "inline-block",
-                  }}
-                >
-                  {exp.empresa}
-                </a>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 8,
-                    color: "#a1a1aa",
-                    fontSize: "1.04rem",
-                    marginBottom: 12,
-                  }}
-                >
-                  <span style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                    <Calendar size={17} style={{ marginRight: 2 }} /> {exp.fecha}
-                  </span>
-                  <span style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                    <MapPin size={17} style={{ marginRight: 2 }} /> {exp.ubicacion}
-                  </span>
-                </div>
-                <p style={{ color: "#d1d5db", marginBottom: "1.1rem", fontSize: "1.13rem" }}>{exp.descripcion}</p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-                  {exp.tecnologias.map((tech, j) => (
-                    <span
-                      key={j}
-                      style={{
-                        background: "#a78bfa",
-                        color: "#232335",
-                        fontWeight: 700,
-                        padding: "0.32rem 0.92rem",
-                        borderRadius: "0.4rem",
-                        fontSize: "0.97rem",
-                        marginTop: 2,
-                      }}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              “{t.mensaje}”
+            </p>
+            <div>
+              <strong style={{ fontSize: "1.05rem" }}>{t.nombre}</strong>
+              <div style={{ fontSize: "0.9rem", color: "#a1a1aa" }}>{t.cargo}</div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

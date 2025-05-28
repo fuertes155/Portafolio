@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useEffect, useState } from "react"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const links = [
   { href: "/", label: "Inicio" },
@@ -10,6 +10,7 @@ const links = [
   { href: "/experiencia", label: "Experiencia" },
   { href: "/habilidades", label: "Habilidades" },
   { href: "/proyectos", label: "Proyectos" },
+  { href: "/testimonios", label: "Testimonios" },
   { href: "/contacto", label: "Contacto" },
 ];
 
@@ -57,7 +58,7 @@ export default function Navbar() {
           gap: isMobile ? "1rem" : 0,
         }}
       >
-        {/* Nombre a la izquierda */}
+        {/* Nombre / Logo */}
         <div
           style={{
             fontWeight: 900,
@@ -88,7 +89,7 @@ export default function Navbar() {
           </button>
         )}
 
-        {/* Links */}
+        {/* Enlaces de navegación */}
         {(menuOpen || !isMobile) && (
           <ul
             style={{
@@ -129,7 +130,7 @@ export default function Navbar() {
                   }}
                 >
                   {link.label}
-                  {/* Línea debajo de la opción activa */}
+                  {/* Línea debajo si es la página activa */}
                   {pathname === link.href && (
                     <span
                       style={{
@@ -150,7 +151,8 @@ export default function Navbar() {
           </ul>
         )}
       </div>
-      {/* Footer responsive fix */}
+
+      {/* Ajuste responsive opcional */}
       <style>{`
         @media (max-width: 768px) {
           footer {
