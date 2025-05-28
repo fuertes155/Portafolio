@@ -15,36 +15,36 @@ type Experiencia = {
 
 const experiencias: Experiencia[] = [
   {
-    puesto: "Ingeniero de Software Senior",
-    empresa: "Empresa XYZ",
-    fecha: "Enero 2020 - Presente",
-    ubicacion: "Madrid, España",
+    puesto: "Desarrollador Fullstack",
+    empresa: "Soluciones Digitales Andinas",
+    fecha: "Febrero 2021 - Presente",
+    ubicacion: "Pasto, Colombia",
     descripcion:
-      "Desarrollo de aplicaciones web utilizando React, Next.js y Node.js. Liderazgo de equipo de desarrollo frontend y mentorización de desarrolladores junior.",
-    tecnologias: ["React", "Next.js", "Node.js", "TypeScript", "GraphQL"],
-    empresaUrl: "#",
+      "Lideré el desarrollo de una plataforma de gestión educativa para instituciones rurales. Implementación de frontend con React y backend en Node.js con MongoDB. Automatización de reportes y conexión con APIs del Ministerio de Educación.",
+    tecnologias: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+    empresaUrl: "https://solucionesandinas.co",
   },
   {
-    puesto: "Desarrollador Frontend",
-    empresa: "Agencia Digital ABC",
-    fecha: "Marzo 2017 - Diciembre 2019",
-    ubicacion: "Barcelona, España",
+    puesto: "Ingeniero de Software",
+    empresa: "Tecnosoft del Sur",
+    fecha: "Julio 2018 - Enero 2021",
+    ubicacion: "Pasto, Colombia",
     descripcion:
-      "Creación de interfaces de usuario para clientes de diversos sectores. Colaboración con diseñadores UX/UI para implementar diseños responsivos.",
-    tecnologias: ["JavaScript", "React", "CSS3", "SASS", "Webpack"],
+      "Diseño y desarrollo de sistemas internos para empresas locales del sector salud y comercio. Desarrollo de dashboards, control de inventario y facturación electrónica.",
+    tecnologias: ["Vue.js", "Laravel", "MySQL", "Bootstrap", "Git"],
     empresaUrl: "#",
   },
 ];
 
 const experienciasExtra: Experiencia[] = [
   {
-    puesto: "Desarrollador Web Freelance",
-    empresa: "Proyectos Independientes",
-    fecha: "Enero 2016 - Febrero 2017",
-    ubicacion: "Remoto",
+    puesto: "Desarrollador Freelance",
+    empresa: "Clientes en Nariño y Ecuador",
+    fecha: "Marzo 2016 - Junio 2018",
+    ubicacion: "Pasto, Colombia / Remoto",
     descripcion:
-      "Desarrollo de sitios web para pequeñas empresas utilizando WordPress, HTML y CSS. Gestión directa con clientes y entrega de soluciones personalizadas.",
-    tecnologias: ["WordPress", "HTML5", "CSS3", "PHP"],
+      "Creación de páginas web corporativas, tiendas online y soluciones personalizadas para emprendimientos en Nariño y el sur de Ecuador. Integración con pasarelas de pago y optimización SEO.",
+    tecnologias: ["WordPress", "HTML5", "CSS3", "JavaScript", "WooCommerce"],
     empresaUrl: "#",
   },
 ];
@@ -58,7 +58,7 @@ export default function Experiencia() {
       id="experiencia"
       style={{
         minHeight: "100vh",
-        padding: "4rem 1rem 2rem", // padding lateral
+        padding: "4rem 1rem 2rem",
         background: "var(--color-background)",
         color: "var(--color-text)",
         display: "flex",
