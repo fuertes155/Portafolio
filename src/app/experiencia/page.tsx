@@ -15,7 +15,7 @@ type Experiencia = {
 
 const experiencias: Experiencia[] = [
   {
-    puesto: "Desarrollador Fullstack",
+    puesto: "Product Manager ",
     empresa: "Soluciones Digitales Andinas",
     fecha: "Febrero 2021 - Presente",
     ubicacion: "Pasto, Colombia",
@@ -38,7 +38,7 @@ const experiencias: Experiencia[] = [
 
 const experienciasExtra: Experiencia[] = [
   {
-    puesto: "Desarrollador Freelance",
+    puesto: "Desarrollador junior",
     empresa: "Clientes en Nariño y Ecuador",
     fecha: "Marzo 2016 - Junio 2018",
     ubicacion: "Pasto, Colombia / Remoto",

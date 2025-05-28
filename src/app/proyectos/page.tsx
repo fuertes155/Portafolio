@@ -1,30 +1,27 @@
 "use client"
 
-import Image from "next/image"; // ✅ Importación necesaria para usar <Image />
+import Image from "next/image";
 
 const proyectos = [
   {
     titulo: "Aplicación Web E-commerce",
     descripcion: "Plataforma de comercio electrónico desarrollada con Next.js y Tailwind CSS.",
     tecnologias: ["Next.js", "React", "Tailwind CSS", "Node.js"],
-    demo: "https://tudemo.com/ecommerce",
-    github: "https://github.com/TU_USUARIO/tu-ecommerce",
+    github: "https://github.com/fuertes155/Estructura.git",
     imagen: "/imagen1.png",
   },
   {
     titulo: "Dashboard Administrativo",
     descripcion: "Panel de control para gestionar usuarios y contenido de una aplicación.",
     tecnologias: ["React", "TypeScript", "Material UI", "Firebase"],
-    demo: "https://tudemo.com/dashboard",
-    github: "https://github.com/TU_USUARIO/tu-dashboard",
+    github: "https://github.com/fuertes155/Trabajo-final.git",
     imagen: "/imagen2.png",
   },
   {
     titulo: "Aplicación Móvil de Fitness",
     descripcion: "App para seguimiento de rutinas de ejercicio y nutrición.",
     tecnologias: ["React Native", "Redux", "Express", "MongoDB"],
-    demo: "https://tudemo.com/fitness",
-    github: "https://github.com/TU_USUARIO/tu-fitness-app",
+    github: "https://github.com/fuertes155/Herencia.git",
     imagen: "/imagen3.png",
   },
 ];
@@ -150,27 +147,6 @@ export default function Proyectos() {
                   marginTop: "0.7rem",
                 }}
               >
-                <a
-                  href={proy.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "inline-block",
-                    textAlign: "center",
-                    background: "#a78bfa",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "0.4rem",
-                    padding: "0.82rem 1.8rem",
-                    fontWeight: 700,
-                    fontSize: "1rem",
-                    cursor: "pointer",
-                    textDecoration: "none",
-                    transition: "background 0.18s",
-                  }}
-                >
-                  Ver Demo
-                </a>
                 <a
                   href={proy.github}
                   target="_blank"

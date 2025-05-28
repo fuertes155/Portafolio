@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Github, Youtube, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Facebook, Instagram, Github, Youtube, Send } from "lucide-react";
 
 export default function Contacto() {
   return (
@@ -60,17 +60,38 @@ export default function Contacto() {
             Sígueme en
           </div>
           <div style={{ display: "flex", gap: "1.2rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
-            {[Facebook, Twitter, Instagram, Github, Youtube].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "#a78bfa" }}
-              >
-                <Icon size={28} />
-              </a>
-            ))}
+            <a
+              href="https://facebook.com/SamuelFuertes"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#a78bfa" }}
+            >
+              <Facebook size={28} />
+            </a>
+            <a
+              href="https://instagram.com/molinafuertes"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#a78bfa" }}
+            >
+              <Instagram size={28} />
+            </a>
+            <a
+              href="https://github.com/fuertes155"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#a78bfa" }}
+            >
+              <Github size={28} />
+            </a>
+            <a
+              href="https://youtube.com/@samuelmolina-u3z"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#a78bfa" }}
+            >
+              <Youtube size={28} />
+            </a>
           </div>
         </div>
         {/* Columna derecha - Formulario */}
