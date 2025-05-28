@@ -1,8 +1,5 @@
 "use client"
 
-import { useState } from "react";
-import { Calendar, MapPin } from "lucide-react";
-
 const tecnicas = [
   { nombre: "HTML/CSS", porcentaje: 40 },
   { nombre: "JavaScript", porcentaje: 30 },

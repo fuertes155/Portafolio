@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"; // ✅ Importación necesaria para usar <Image />
+
 const proyectos = [
   {
     titulo: "Aplicación Web E-commerce",
@@ -77,15 +79,15 @@ export default function Proyectos() {
               alignItems: "stretch",
             }}
           >
-            <img
-              src={proy.imagen}
-              alt={proy.titulo}
-              style={{
-                width: "100%",
-                height: "180px",
-                objectFit: "cover",
-              }}
-            />
+            <div style={{ position: "relative", width: "100%", height: "180px" }}>
+              <Image
+                src={proy.imagen}
+                alt={proy.titulo}
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, 300px"
+              />
+            </div>
             <div
               style={{
                 padding: "1.6rem 1.5rem 1.4rem 1.5rem",

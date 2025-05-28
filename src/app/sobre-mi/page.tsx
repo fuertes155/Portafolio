@@ -1,6 +1,11 @@
 "use client"
 
+import Image from "next/image";
+import { useState } from "react";
+
 export default function SobreMi() {
+  const [imgSrc, setImgSrc] = useState("/profile.jpg");
+
   return (
     <section
       id="sobre-mi"
@@ -64,21 +69,21 @@ export default function SobreMi() {
               marginBottom: "1rem",
               border: "4px solid var(--color-bg-card, #232335)",
               boxSizing: "border-box",
+              position: "relative",
+              overflow: "hidden",
             }}
           >
-            <img
-              src="/profile.jpg"
+            <Image
+              src={imgSrc}
               alt="Eval Samuel Molina"
+              fill
               style={{
-                width: "90%",
-                height: "90%",
                 objectFit: "cover",
                 borderRadius: "50%",
                 border: "3.5px solid var(--color-background)",
               }}
-              onError={(e) =>
-                (e.currentTarget.src =
-                  "https://ui-avatars.com/api/?name=Eval+Samuel+Molina&background=a78bfa&color=fff&size=150")
+              onError={() =>
+                setImgSrc("https://ui-avatars.com/api/?name=Eval+Samuel+Molina&background=a78bfa&color=fff&size=150")
               }
             />
           </div>

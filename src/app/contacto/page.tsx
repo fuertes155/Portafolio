@@ -9,7 +9,7 @@ export default function Contacto() {
       style={{
         minHeight: "100vh",
         background: "var(--color-background)",
-        padding: "4rem 1rem 2rem", // Agregado padding horizontal
+        padding: "4rem 1rem 2rem",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -17,7 +17,7 @@ export default function Contacto() {
     >
       <h2
         style={{
-          fontSize: "2.5rem", // más flexible
+          fontSize: "2.5rem",
           fontWeight: 800,
           color: "var(--color-primary)",
           marginBottom: "2.6rem",
@@ -29,7 +29,7 @@ export default function Contacto() {
       <div
         style={{
           display: "flex",
-          gap: "2rem", // un poco menos en móvil
+          gap: "2rem",
           width: "100%",
           maxWidth: "1100px",
           justifyContent: "center",
@@ -37,16 +37,16 @@ export default function Contacto() {
         }}
       >
         {/* Columna izquierda - Info */}
-        <div style={{ flex: "1 1 320px", minWidth: "100%", maxWidth: 500 }}> {/* full ancho en móvil */}
+        <div style={{ flex: "1 1 320px", minWidth: "100%", maxWidth: 500 }}>
           <h3 style={{ color: "var(--color-text)", fontWeight: 700, fontSize: "1.8rem", marginBottom: "1.7rem" }}>
             Información de Contacto
           </h3>
           {[{
-            icon: <Mail size={27} color="#a78bfa" />, label: "Email", value: "contacto@ejemplo.com"
+            icon: <Mail size={27} color="#a78bfa" />, label: "Email", value: "sam33mol4@gmail.com"
           }, {
-            icon: <Phone size={27} color="#a78bfa" />, label: "Teléfono", value: "+34 123 456 789"
+            icon: <Phone size={27} color="#a78bfa" />, label: "Teléfono", value: "3158598604"
           }, {
-            icon: <MapPin size={27} color="#a78bfa" />, label: "Ubicación", value: "Madrid, España"
+            icon: <MapPin size={27} color="#a78bfa" />, label: "Ubicación", value: "Pasto, Nariño"
           }].map((item, i) => (
             <div key={i} style={{ display: "flex", alignItems: "center", gap: "1.1rem", marginBottom: "1.4rem" }}>
               {item.icon}
@@ -74,7 +74,7 @@ export default function Contacto() {
           </div>
         </div>
         {/* Columna derecha - Formulario */}
-        <div style={{ flex: "1 1 320px", minWidth: "100%", maxWidth: 600 }}> {/* full ancho en móvil */}
+        <div style={{ flex: "1 1 320px", minWidth: "100%", maxWidth: 600 }}>
           <h3 style={{ color: "var(--color-text)", fontWeight: 700, fontSize: "1.8rem", marginBottom: "1.7rem" }}>
             Envíame un Mensaje
           </h3>
