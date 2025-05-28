@@ -58,7 +58,7 @@ export default function Experiencia() {
       id="experiencia"
       style={{
         minHeight: "100vh",
-        padding: "4rem 0 2rem",
+        padding: "4rem 1rem 2rem", // padding lateral
         background: "var(--color-background)",
         color: "var(--color-text)",
         display: "flex",
@@ -68,11 +68,12 @@ export default function Experiencia() {
     >
       <h2
         style={{
-          fontSize: "2.8rem",
+          fontSize: "2.4rem",
           fontWeight: 800,
           color: "var(--color-primary)",
           marginBottom: "2.5rem",
           letterSpacing: "-1.5px",
+          textAlign: "center"
         }}
       >
         Mi Experiencia
@@ -84,11 +85,10 @@ export default function Experiencia() {
           position: "relative",
         }}
       >
-        {/* Línea vertical */}
         <div
           style={{
             position: "absolute",
-            left: 45,
+            left: 30,
             top: 0,
             bottom: 0,
             width: 4,
@@ -99,8 +99,7 @@ export default function Experiencia() {
         />
         <div style={{ display: "flex", flexDirection: "column", gap: "3.3rem", position: "relative" }}>
           {experienciasAMostrar.map((exp, idx) => (
-            <div key={idx} style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", position: "relative", zIndex: 1 }}>
-              {/* Punto de la línea */}
+            <div key={idx} style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", flexWrap: "wrap", position: "relative", zIndex: 1 }}>
               <div style={{ width: 90, display: "flex", justifyContent: "center", position: "relative" }}>
                 <div
                   style={{
@@ -114,7 +113,6 @@ export default function Experiencia() {
                   }}
                 />
               </div>
-              {/* Tarjeta de experiencia */}
               <div
                 style={{
                   background: "var(--color-bg-card, #232335)",
@@ -141,7 +139,7 @@ export default function Experiencia() {
                 >
                   {exp.empresa}
                 </a>
-                <div style={{ display: "flex", alignItems: "center", color: "var(--color-muted)", fontSize: "1.04rem", marginBottom: 12, gap: 20 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6, color: "var(--color-muted)", fontSize: "1.04rem", marginBottom: 12 }}>
                   <span style={{ display: "flex", alignItems: "center", gap: 4 }}>
                     <Calendar size={17} style={{ marginRight: 2 }} /> {exp.fecha}
                   </span>
@@ -173,7 +171,6 @@ export default function Experiencia() {
           ))}
         </div>
 
-        {/* Botón Ver Más */}
         <div style={{ marginTop: "3rem", textAlign: "center" }}>
           <button
             onClick={() => setVerMas(!verMas)}

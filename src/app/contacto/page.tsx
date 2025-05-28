@@ -9,7 +9,7 @@ export default function Contacto() {
       style={{
         minHeight: "100vh",
         background: "var(--color-background)",
-        padding: "4rem 0 2rem",
+        padding: "4rem 1rem 2rem", // Agregado padding horizontal
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -17,7 +17,7 @@ export default function Contacto() {
     >
       <h2
         style={{
-          fontSize: "3rem",
+          fontSize: "2.5rem", // más flexible
           fontWeight: 800,
           color: "var(--color-primary)",
           marginBottom: "2.6rem",
@@ -29,7 +29,7 @@ export default function Contacto() {
       <div
         style={{
           display: "flex",
-          gap: "4rem",
+          gap: "2rem", // un poco menos en móvil
           width: "100%",
           maxWidth: "1100px",
           justifyContent: "center",
@@ -37,98 +37,70 @@ export default function Contacto() {
         }}
       >
         {/* Columna izquierda - Info */}
-        <div style={{ flex: "1 1 320px", minWidth: 300 }}>
-          <h3 style={{ color: "var(--color-text)", fontWeight: 700, fontSize: "2rem", marginBottom: "1.7rem" }}>
+        <div style={{ flex: "1 1 320px", minWidth: "100%", maxWidth: 500 }}> {/* full ancho en móvil */}
+          <h3 style={{ color: "var(--color-text)", fontWeight: 700, fontSize: "1.8rem", marginBottom: "1.7rem" }}>
             Información de Contacto
           </h3>
-          <div style={{ display: "flex", alignItems: "center", gap: "1.1rem", marginBottom: "1.4rem" }}>
-            <Mail size={27} color="#a78bfa" />
-            <div>
-              <div style={{ fontWeight: 700, fontSize: "1.1rem" }}>Email</div>
-              <div style={{ color: "var(--color-muted)", fontSize: "1rem" }}>contacto@ejemplo.com</div>
+          {[{
+            icon: <Mail size={27} color="#a78bfa" />, label: "Email", value: "contacto@ejemplo.com"
+          }, {
+            icon: <Phone size={27} color="#a78bfa" />, label: "Teléfono", value: "+34 123 456 789"
+          }, {
+            icon: <MapPin size={27} color="#a78bfa" />, label: "Ubicación", value: "Madrid, España"
+          }].map((item, i) => (
+            <div key={i} style={{ display: "flex", alignItems: "center", gap: "1.1rem", marginBottom: "1.4rem" }}>
+              {item.icon}
+              <div>
+                <div style={{ fontWeight: 700, fontSize: "1.1rem" }}>{item.label}</div>
+                <div style={{ color: "var(--color-muted)", fontSize: "1rem" }}>{item.value}</div>
+              </div>
             </div>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "1.1rem", marginBottom: "1.4rem" }}>
-            <Phone size={27} color="#a78bfa" />
-            <div>
-              <div style={{ fontWeight: 700, fontSize: "1.1rem" }}>Teléfono</div>
-              <div style={{ color: "var(--color-muted)", fontSize: "1rem" }}>+34 123 456 789</div>
-            </div>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "1.1rem", marginBottom: "2rem" }}>
-            <MapPin size={27} color="#a78bfa" />
-            <div>
-              <div style={{ fontWeight: 700, fontSize: "1.1rem" }}>Ubicación</div>
-              <div style={{ color: "var(--color-muted)", fontSize: "1rem" }}>Madrid, España</div>
-            </div>
-          </div>
+          ))}
           <div style={{ marginBottom: "1.3rem", fontWeight: 700, color: "var(--color-text)" }}>
             Sígueme en
           </div>
-          <div style={{ display: "flex", gap: "1.2rem", marginBottom: "2.5rem" }}>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{ color: "#a78bfa" }}>
-              <Facebook size={28} />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ color: "#a78bfa" }}>
-              <Twitter size={28} />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: "#a78bfa" }}>
-              <Instagram size={28} />
-            </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" style={{ color: "#a78bfa" }}>
-              <Github size={28} />
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{ color: "#a78bfa" }}>
-              <Youtube size={28} />
-            </a>
+          <div style={{ display: "flex", gap: "1.2rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
+            {[Facebook, Twitter, Instagram, Github, Youtube].map((Icon, i) => (
+              <a
+                key={i}
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#a78bfa" }}
+              >
+                <Icon size={28} />
+              </a>
+            ))}
           </div>
         </div>
         {/* Columna derecha - Formulario */}
-        <div style={{ flex: "2 1 400px", minWidth: 320 }}>
-          <h3 style={{ color: "var(--color-text)", fontWeight: 700, fontSize: "2rem", marginBottom: "1.7rem" }}>
+        <div style={{ flex: "1 1 320px", minWidth: "100%", maxWidth: 600 }}> {/* full ancho en móvil */}
+          <h3 style={{ color: "var(--color-text)", fontWeight: 700, fontSize: "1.8rem", marginBottom: "1.7rem" }}>
             Envíame un Mensaje
           </h3>
           <form style={{ display: "flex", flexDirection: "column", gap: "1.4rem" }}>
-            <div>
-              <label style={{ color: "var(--color-text)", fontWeight: 600, fontSize: "1.05rem" }}>
-                Nombre
-                <input
-                  type="text"
-                  placeholder="Tu nombre"
-                  style={{
-                    display: "block",
-                    marginTop: 6,
-                    width: "100%",
-                    background: "var(--color-bg-card, #232335)",
-                    color: "var(--color-text)",
-                    border: "1.7px solid #35384a",
-                    borderRadius: "0.45rem",
-                    padding: "0.75rem 1rem",
-                    fontSize: "1rem",
-                  }}
-                />
-              </label>
-            </div>
-            <div>
-              <label style={{ color: "var(--color-text)", fontWeight: 600, fontSize: "1.05rem" }}>
-                Email
-                <input
-                  type="email"
-                  placeholder="tu@email.com"
-                  style={{
-                    display: "block",
-                    marginTop: 6,
-                    width: "100%",
-                    background: "var(--color-bg-card, #232335)",
-                    color: "var(--color-text)",
-                    border: "1.7px solid #35384a",
-                    borderRadius: "0.45rem",
-                    padding: "0.75rem 1rem",
-                    fontSize: "1rem",
-                  }}
-                />
-              </label>
-            </div>
+            {['Nombre', 'Email'].map((field, i) => (
+              <div key={i}>
+                <label style={{ color: "var(--color-text)", fontWeight: 600, fontSize: "1.05rem" }}>
+                  {field}
+                  <input
+                    type={field === 'Email' ? 'email' : 'text'}
+                    placeholder={field === 'Email' ? 'tu@email.com' : 'Tu nombre'}
+                    style={{
+                      display: "block",
+                      marginTop: 6,
+                      width: "100%",
+                      background: "var(--color-bg-card, #232335)",
+                      color: "var(--color-text)",
+                      border: "1.7px solid #35384a",
+                      borderRadius: "0.45rem",
+                      padding: "0.75rem 1rem",
+                      fontSize: "1rem",
+                    }}
+                  />
+                </label>
+              </div>
+            ))}
             <div>
               <label style={{ color: "var(--color-text)", fontWeight: 600, fontSize: "1.05rem" }}>
                 Mensaje

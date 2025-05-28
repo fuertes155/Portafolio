@@ -11,15 +11,17 @@ export default function SobreMi() {
         flexDirection: "column",
         alignItems: "center",
         padding: "4rem 1rem 2rem 1rem",
+        boxSizing: "border-box",
       }}
     >
       <h2
         style={{
-          fontSize: "2.8rem",
+          fontSize: "clamp(2rem, 6vw, 2.8rem)",
           fontWeight: 800,
           color: "var(--color-primary)",
           marginBottom: "2.5rem",
           letterSpacing: "-1.5px",
+          textAlign: "center",
         }}
       >
         Sobre Mí
@@ -37,67 +39,120 @@ export default function SobreMi() {
           padding: "2.5rem 2rem",
           gap: "2.5rem",
           flexWrap: "wrap",
+          justifyContent: "center",
         }}
       >
         {/* Imagen de perfil */}
-        <div style={{
-          flex: "0 0 170px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center"
-        }}>
-          <div style={{
-            width: "170px",
-            height: "170px",
-            borderRadius: "50%",
-            background: "linear-gradient(135deg, var(--color-primary) 70%, #232335 100%)",
+        <div
+          style={{
+            flex: "0 0 auto",
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            marginBottom: "1rem",
-            border: "4px solid var(--color-bg-card, #232335)"
-          }}>
-            {/* Cambia la ruta de la imagen cuando la tengas */}
+          }}
+        >
+          <div
+            style={{
+              width: "clamp(130px, 40vw, 170px)",
+              height: "clamp(130px, 40vw, 170px)",
+              borderRadius: "50%",
+              background: "linear-gradient(135deg, var(--color-primary) 70%, #232335 100%)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: "1rem",
+              border: "4px solid var(--color-bg-card, #232335)",
+              boxSizing: "border-box",
+            }}
+          >
             <img
               src="/profile.jpg"
               alt="Eval Samuel Molina"
               style={{
-                width: "150px",
-                height: "150px",
+                width: "90%",
+                height: "90%",
                 objectFit: "cover",
                 borderRadius: "50%",
-                border: "3.5px solid var(--color-background)"
+                border: "3.5px solid var(--color-background)",
               }}
-              onError={e => (e.currentTarget.src = "https://ui-avatars.com/api/?name=Eval+Samuel+Molina&background=a78bfa&color=fff&size=150")}
+              onError={(e) =>
+                (e.currentTarget.src =
+                  "https://ui-avatars.com/api/?name=Eval+Samuel+Molina&background=a78bfa&color=fff&size=150")
+              }
             />
           </div>
-          <span style={{ fontSize: "1rem", color: "var(--color-primary)", fontWeight: 700 }}>Eval Samuel Molina Fuertes</span>
+          <span
+            style={{
+              fontSize: "1rem",
+              color: "var(--color-primary)",
+              fontWeight: 700,
+              textAlign: "center",
+            }}
+          >
+            Eval Samuel Molina Fuertes
+          </span>
         </div>
         {/* Texto e info */}
-        <div style={{
-          flex: 1,
-          minWidth: "240px",
-          color: "var(--color-text)",
-        }}>
-          <h3 style={{
-            fontWeight: 700,
-            fontSize: "1.35rem",
-            color: "var(--color-primary)",
-            marginBottom: "0.8rem",
-            letterSpacing: "-0.6px"
-          }}>¿Quién soy?</h3>
-          <p style={{ color: "var(--color-muted)", marginBottom: "1rem", fontSize: "1.08rem", lineHeight: 1.7 }}>
+        <div
+          style={{
+            flex: 1,
+            minWidth: "260px",
+            color: "var(--color-text)",
+          }}
+        >
+          <h3
+            style={{
+              fontWeight: 700,
+              fontSize: "1.35rem",
+              color: "var(--color-primary)",
+              marginBottom: "0.8rem",
+              letterSpacing: "-0.6px",
+              textAlign: "left",
+            }}
+          >
+            ¿Quién soy?
+          </h3>
+          <p
+            style={{
+              color: "var(--color-muted)",
+              marginBottom: "1rem",
+              fontSize: "1.08rem",
+              lineHeight: 1.7,
+            }}
+          >
             Soy <b>Eval Samuel Molina Fuertes</b>, estudiante de Ingeniería de Software con una gran pasión por el desarrollo web y el diseño de experiencias intuitivas. Me gusta resolver problemas reales con tecnología y siempre busco aprender algo nuevo cada día.
           </p>
-          <p style={{ color: "var(--color-muted)", marginBottom: "1.1rem", fontSize: "1.08rem" }}>
+          <p
+            style={{
+              color: "var(--color-muted)",
+              marginBottom: "1.1rem",
+              fontSize: "1.08rem",
+            }}
+          >
             Destaco por mi creatividad, atención al detalle y habilidades en diseño UI/UX. Me encanta trabajar en equipo, colaborar y liderar proyectos que impacten positivamente en las personas.
           </p>
           <div style={{ marginBottom: "1.6rem" }}>
-            <span style={{ color: "var(--color-primary)", fontWeight: 600, fontSize: "1.01rem" }}>Habilidades:</span>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.7rem", marginTop: "0.7rem" }}>
-              {["JavaScript", "React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "UI/UX"].map(skill => (
-                <span key={skill}
+            <span
+              style={{
+                color: "var(--color-primary)",
+                fontWeight: 600,
+                fontSize: "1.01rem",
+              }}
+            >
+              Habilidades:
+            </span>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "0.7rem",
+                marginTop: "0.7rem",
+              }}
+            >
+              {["JavaScript", "React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "UI/UX"].map((skill) => (
+                <span
+                  key={skill}
                   style={{
                     background: "var(--color-primary)",
                     color: "#232335",

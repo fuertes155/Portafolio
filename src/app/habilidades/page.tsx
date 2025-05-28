@@ -1,5 +1,8 @@
 "use client"
 
+import { useState } from "react";
+import { Calendar, MapPin } from "lucide-react";
+
 const tecnicas = [
   { nombre: "HTML/CSS", porcentaje: 40 },
   { nombre: "JavaScript", porcentaje: 30 },
@@ -23,7 +26,7 @@ export default function Habilidades() {
       style={{
         minHeight: "100vh",
         background: "var(--color-background)",
-        padding: "4rem 0 2rem",
+        padding: "4rem 1rem 2rem",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -31,7 +34,7 @@ export default function Habilidades() {
     >
       <h2
         style={{
-          fontSize: "3rem",
+          fontSize: "2.5rem",
           fontWeight: 800,
           color: "var(--color-primary)",
           marginBottom: "2.6rem",
@@ -45,14 +48,15 @@ export default function Habilidades() {
         style={{
           display: "flex",
           flexDirection: "row",
-          gap: "6rem",
+          flexWrap: "wrap",
+          gap: "3rem",
           justifyContent: "center",
           width: "100%",
           maxWidth: "1050px",
         }}
       >
         {/* Técnicas */}
-        <div style={{ flex: 1, minWidth: 300 }}>
+        <div style={{ flex: "1 1 320px", minWidth: 280 }}>
           <h3
             style={{
               color: "var(--color-text)",
@@ -103,7 +107,7 @@ export default function Habilidades() {
           ))}
         </div>
         {/* Blandas */}
-        <div style={{ flex: 1, minWidth: 300 }}>
+        <div style={{ flex: "1 1 320px", minWidth: 280 }}>
           <h3
             style={{
               color: "var(--color-text)",

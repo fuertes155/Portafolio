@@ -14,14 +14,17 @@ export default function Inicio() {
         padding: "0 1.5rem",
         background:
           "radial-gradient(ellipse 60% 60% at 50% 30%, #7c6dfa44 0%, #232335 70%, #1a1a1f 100%)",
+        textAlign: "center",
       }}
     >
       {/* Foto de perfil */}
-      <div style={{
-        margin: "2rem 0 2.3rem 0",
-        display: "flex",
-        justifyContent: "center",
-      }}>
+      <div
+        style={{
+          margin: "2rem 0 2.3rem 0",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <div
           style={{
             width: 180,
@@ -33,7 +36,7 @@ export default function Inicio() {
             background: "#28203c",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <Image
@@ -45,22 +48,24 @@ export default function Inicio() {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              objectPosition: "center"
+              objectPosition: "center",
             }}
             priority
           />
         </div>
       </div>
-      <h1 style={{
-        fontSize: "4.3rem",
-        fontWeight: 800,
-        textAlign: "center",
-        color: "#b5a5fa",
-        margin: "1.8rem 0 0 0"
-      }}>
+      <h1
+        style={{
+          fontSize: "clamp(2.5rem, 8vw, 4.3rem)",
+          fontWeight: 800,
+          textAlign: "center",
+          color: "#b5a5fa",
+          margin: "1.8rem 0 0 0",
+          lineHeight: 1.2,
+        }}
+      >
         Eval Samuel Molina Fuertes
       </h1>
-      {/* Puedes agregar aquí más texto o dejarlo así */}
     </section>
   );
 }

@@ -41,7 +41,7 @@ export default function Experiencia() {
       id="experiencia"
       style={{
         minHeight: "100vh",
-        padding: "4rem 0 2rem",
+        padding: "4rem 1rem 2rem",
         background: "linear-gradient(to bottom right, #181824, #232335, #181824)",
         color: "#fff",
         display: "flex",
@@ -51,11 +51,12 @@ export default function Experiencia() {
     >
       <h2
         style={{
-          fontSize: "3rem",
+          fontSize: "2.5rem",
           fontWeight: 800,
           color: "#a78bfa",
           marginBottom: "2.5rem",
           letterSpacing: "-1.5px",
+          textAlign: "center",
         }}
       >
         Mi Experiencia
@@ -67,11 +68,10 @@ export default function Experiencia() {
           position: "relative",
         }}
       >
-        {/* Línea vertical */}
         <div
           style={{
             position: "absolute",
-            left: 45,
+            left: 30,
             top: 0,
             bottom: 0,
             width: 4,
@@ -80,11 +80,27 @@ export default function Experiencia() {
             zIndex: 0,
           }}
         />
-        <div style={{ display: "flex", flexDirection: "column", gap: "3.3rem", position: "relative" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "3rem", position: "relative" }}>
           {experiencias.map((exp, idx) => (
-            <div key={idx} style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", position: "relative", zIndex: 1 }}>
-              {/* Punto de la línea */}
-              <div style={{ width: 90, display: "flex", justifyContent: "center", position: "relative" }}>
+            <div
+              key={idx}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                alignItems: "flex-start",
+                position: "relative",
+                zIndex: 1,
+              }}
+            >
+              <div
+                style={{
+                  width: 90,
+                  display: "flex",
+                  justifyContent: "center",
+                  position: "relative",
+                }}
+              >
                 <div
                   style={{
                     width: 18,
@@ -97,7 +113,6 @@ export default function Experiencia() {
                   }}
                 />
               </div>
-              {/* Tarjeta de experiencia */}
               <div
                 style={{
                   background: "#313543",
@@ -105,7 +120,7 @@ export default function Experiencia() {
                   boxShadow: "0 4px 28px rgba(40,30,90,0.15)",
                   padding: "2.1rem 2rem 1.6rem 2rem",
                   flex: 1,
-                  minWidth: 0,
+                  minWidth: 280,
                 }}
               >
                 <h3 style={{ fontSize: "1.4rem", fontWeight: 700, marginBottom: 5 }}>{exp.puesto}</h3>
@@ -119,12 +134,21 @@ export default function Experiencia() {
                     fontSize: "1.12rem",
                     textDecoration: "none",
                     marginBottom: 8,
-                    display: "inline-block"
+                    display: "inline-block",
                   }}
                 >
                   {exp.empresa}
                 </a>
-                <div style={{ display: "flex", alignItems: "center", color: "#a1a1aa", fontSize: "1.04rem", marginBottom: 12, gap: 20 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 8,
+                    color: "#a1a1aa",
+                    fontSize: "1.04rem",
+                    marginBottom: 12,
+                  }}
+                >
                   <span style={{ display: "flex", alignItems: "center", gap: 4 }}>
                     <Calendar size={17} style={{ marginRight: 2 }} /> {exp.fecha}
                   </span>

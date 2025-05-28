@@ -1,38 +1,29 @@
 "use client"
 
-type Proyecto = {
-  titulo: string;
-  descripcion: string;
-  tecnologias: string[];
-  demo: string;
-  github: string;
-  imagen: string; // Añadida propiedad para la imagen
-};
-
-const proyectos: Proyecto[] = [
+const proyectos = [
   {
     titulo: "Aplicación Web E-commerce",
     descripcion: "Plataforma de comercio electrónico desarrollada con Next.js y Tailwind CSS.",
     tecnologias: ["Next.js", "React", "Tailwind CSS", "Node.js"],
-    demo: "https://tudemo.com/ecommerce",      // Cambia por tu link real
-    github: "https://github.com/TU_USUARIO/tu-ecommerce", // Cambia por tu repo real
-    imagen: "/imagen1.png", // Imagen desde public
+    demo: "https://tudemo.com/ecommerce",
+    github: "https://github.com/TU_USUARIO/tu-ecommerce",
+    imagen: "/imagen1.png",
   },
   {
     titulo: "Dashboard Administrativo",
     descripcion: "Panel de control para gestionar usuarios y contenido de una aplicación.",
     tecnologias: ["React", "TypeScript", "Material UI", "Firebase"],
-    demo: "https://tudemo.com/dashboard",      // Cambia por tu link real
-    github: "https://github.com/TU_USUARIO/tu-dashboard", // Cambia por tu repo real
-    imagen: "/imagen2.png", // Imagen desde public
+    demo: "https://tudemo.com/dashboard",
+    github: "https://github.com/TU_USUARIO/tu-dashboard",
+    imagen: "/imagen2.png",
   },
   {
     titulo: "Aplicación Móvil de Fitness",
     descripcion: "App para seguimiento de rutinas de ejercicio y nutrición.",
     tecnologias: ["React Native", "Redux", "Express", "MongoDB"],
-    demo: "https://tudemo.com/fitness",        // Cambia por tu link real
-    github: "https://github.com/TU_USUARIO/tu-fitness-app", // Cambia por tu repo real
-    imagen: "/imagen3.png", // Imagen desde public
+    demo: "https://tudemo.com/fitness",
+    github: "https://github.com/TU_USUARIO/tu-fitness-app",
+    imagen: "/imagen3.png",
   },
 ];
 
@@ -42,7 +33,7 @@ export default function Proyectos() {
       id="proyectos"
       style={{
         minHeight: "100vh",
-        padding: "4rem 1.5rem 2rem",
+        padding: "4rem 1rem 2rem",
         color: "white",
         display: "flex",
         flexDirection: "column",
@@ -50,24 +41,27 @@ export default function Proyectos() {
         background: "radial-gradient(ellipse 60% 60% at 50% 30%, #7c6dfa44 0%, #232335 70%, #1a1a1f 100%)",
       }}
     >
-      <h2 style={{
-        fontSize: "3.2rem",
-        fontWeight: 800,
-        color: "#a78bfa",
-        marginBottom: "2.5rem",
-        letterSpacing: "-1.5px"
-      }}>
+      <h2
+        style={{
+          fontSize: "2.7rem",
+          fontWeight: 800,
+          color: "#a78bfa",
+          marginBottom: "2.5rem",
+          letterSpacing: "-1.5px",
+          textAlign: "center",
+        }}
+      >
         Mis Proyectos
       </h2>
 
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-          gap: "2.2rem",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "2rem",
           width: "100%",
           maxWidth: "1280px",
-          marginBottom: "3rem"
+          marginBottom: "3rem",
         }}
       >
         {proyectos.map((proy, i) => (
@@ -80,10 +74,9 @@ export default function Proyectos() {
               display: "flex",
               flexDirection: "column",
               boxShadow: "0 4px 30px rgba(0,0,0,0.12)",
-              alignItems: "stretch"
+              alignItems: "stretch",
             }}
           >
-            {/* Reemplazado el placeholder con la imagen */}
             <img
               src={proy.imagen}
               alt={proy.titulo}
@@ -93,17 +86,43 @@ export default function Proyectos() {
                 objectFit: "cover",
               }}
             />
-            <div style={{ padding: "1.6rem 1.5rem 1.4rem 1.5rem", flexGrow: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div
+              style={{
+                padding: "1.6rem 1.5rem 1.4rem 1.5rem",
+                flexGrow: 1,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
               <div>
-                <h3 style={{ fontSize: "1.3rem", fontWeight: 700, marginBottom: "0.6rem", color: "#fff" }}>
+                <h3
+                  style={{
+                    fontSize: "1.3rem",
+                    fontWeight: 700,
+                    marginBottom: "0.6rem",
+                    color: "#fff",
+                  }}
+                >
                   {proy.titulo}
                 </h3>
-                <p style={{ fontSize: "1.07rem", color: "#a1a1aa", marginBottom: "1.2rem" }}>
+                <p
+                  style={{
+                    fontSize: "1.07rem",
+                    color: "#a1a1aa",
+                    marginBottom: "1.2rem",
+                  }}
+                >
                   {proy.descripcion}
                 </p>
-                <div style={{
-                  display: "flex", flexWrap: "wrap", gap: "0.7rem", marginBottom: "1.3rem"
-                }}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "0.7rem",
+                    marginBottom: "1.3rem",
+                  }}
+                >
                   {proy.tecnologias.map((tech, j) => (
                     <span
                       key={j}
@@ -113,7 +132,7 @@ export default function Proyectos() {
                         fontSize: "0.87rem",
                         borderRadius: "0.5rem",
                         color: "#a78bfa",
-                        fontWeight: 700
+                        fontWeight: 700,
                       }}
                     >
                       {tech}
@@ -121,13 +140,14 @@ export default function Proyectos() {
                   ))}
                 </div>
               </div>
-              {/* Botones: Ver Demo y Ver Código */}
-              <div style={{
-                display: "flex",
-                gap: "1rem",
-                marginTop: "0.7rem",
-                justifyContent: "center"
-              }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.8rem",
+                  marginTop: "0.7rem",
+                }}
+              >
                 <a
                   href={proy.demo}
                   target="_blank"
@@ -144,7 +164,7 @@ export default function Proyectos() {
                     fontSize: "1rem",
                     cursor: "pointer",
                     textDecoration: "none",
-                    transition: "background 0.18s"
+                    transition: "background 0.18s",
                   }}
                 >
                   Ver Demo
@@ -165,7 +185,7 @@ export default function Proyectos() {
                     fontSize: "1rem",
                     cursor: "pointer",
                     textDecoration: "none",
-                    transition: "background 0.18s"
+                    transition: "background 0.18s",
                   }}
                 >
                   Ver Código
@@ -176,7 +196,6 @@ export default function Proyectos() {
         ))}
       </div>
 
-      {/* Botón "Contacta Conmigo" abajo */}
       <button
         style={{
           background: "#a78bfa",
@@ -188,7 +207,7 @@ export default function Proyectos() {
           fontSize: "1.1rem",
           cursor: "pointer",
           boxShadow: "0 2px 10px rgba(167,139,250,0.08)",
-          margin: "0 auto"
+          margin: "0 auto",
         }}
         onClick={() => alert("¡Gracias por tu interés!")}
       >
