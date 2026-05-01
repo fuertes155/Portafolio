@@ -45,7 +45,7 @@ export default function Testimonios() {
       id="testimonios"
       style={{
         padding: "4rem 1rem",
-        background: "#1e1e25",
+        backgroundColor: "#1e1e25",
         color: "var(--color-text)",
         textAlign: "center",
         minHeight: "100vh",
@@ -75,7 +75,7 @@ export default function Testimonios() {
           <div
             key={i}
             style={{
-              background: "#232335",
+              background: "var(--color-bg-card)",
               padding: "2rem",
               borderRadius: "1rem",
               boxShadow: "0 6px 20px rgba(0,0,0,0.12)",
@@ -86,7 +86,7 @@ export default function Testimonios() {
               style={{
                 fontStyle: "italic",
                 marginBottom: "1.2rem",
-                color: "#d4d4d8",
+                color: "var(--color-muted-2)",
                 lineHeight: "1.6",
               }}
             >
@@ -94,7 +94,7 @@ export default function Testimonios() {
             </p>
             <div>
               <strong style={{ fontSize: "1.05rem" }}>{t.nombre}</strong>
-              <div style={{ fontSize: "0.9rem", color: "#a1a1aa" }}>{t.cargo}</div>
+              <div style={{ fontSize: "0.9rem", color: "var(--color-muted)" }}>{t.cargo}</div>
             </div>
           </div>
         ))}

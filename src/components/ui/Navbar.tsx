@@ -30,7 +30,8 @@ export default function Navbar() {
     <nav
       style={{
         width: "100%",
-        background: "rgba(24,24,36, 0.98)",
+        backgroundColor: "#181824", /* Fondo sólido obligatorio para lectores */
+        backgroundImage: "linear-gradient(to bottom, #181824, #181824)", /* Asegura que el gradiente no interfiera */
         color: "var(--color-text)",
         padding: "0 0",
         boxShadow: "0 1.5px 0 0 var(--color-border)",
@@ -56,6 +57,7 @@ export default function Navbar() {
           padding: "0.7rem 1rem",
           boxSizing: "border-box",
           gap: isMobile ? "1rem" : 0,
+          backgroundColor: "#181824", /* Fondo explícito para cada contenedor */
         }}
       >
         {/* Nombre / Logo */}
@@ -66,6 +68,7 @@ export default function Navbar() {
             color: "var(--color-primary)",
             textAlign: isMobile ? "center" : "left",
             width: isMobile ? "100%" : "auto",
+            backgroundColor: "#181824",
           }}
         >
           Eval Samuel Molina
@@ -152,23 +155,6 @@ export default function Navbar() {
         )}
       </div>
 
-      {/* Ajuste responsive opcional */}
-      <style>{`
-        @media (max-width: 768px) {
-          footer {
-            flex-direction: column !important;
-            text-align: center;
-            gap: 1.2rem;
-          }
-          footer .footer-section {
-            width: 100% !important;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-          }
-        }
-      `}</style>
     </nav>
   );
 }

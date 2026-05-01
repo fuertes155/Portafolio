@@ -22,7 +22,8 @@ export default function Habilidades() {
       id="habilidades"
       style={{
         minHeight: "100vh",
-        background: "var(--color-background)",
+        backgroundColor: "#181824",
+        backgroundImage: "var(--color-background)",
         padding: "4rem 1rem 2rem",
         display: "flex",
         flexDirection: "column",

@@ -11,14 +11,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body
-        style={{
-          margin: 0,
-          padding: 0,
-          fontFamily: "system-ui, sans-serif",
-          backgroundColor: "var(--color-background)",
-        }}
-      >
+      <body>
         <Navbar />
         <main
           style={{
@@ -29,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             maxWidth: "1280px",
             margin: "0 auto",
             boxSizing: "border-box",
+            minHeight: "calc(100vh - 5rem)", /* Asegura que el main ocupe el espacio restante */
           }}
         >
           {children}

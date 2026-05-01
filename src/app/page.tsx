@@ -12,9 +12,11 @@ export default function Inicio() {
         alignItems: "center",
         justifyContent: "center",
         padding: "0 1.5rem",
-        background:
+        backgroundColor: "#181824", /* Fondo sólido obligatorio para lectores de contraste */
+        backgroundImage:
           "radial-gradient(ellipse 60% 60% at 50% 30%, #7c6dfa44 0%, #232335 70%, #1a1a1f 100%)",
         textAlign: "center",
+        position: "relative",
       }}
     >
       {/* Foto de perfil */}
@@ -31,8 +33,8 @@ export default function Inicio() {
             height: 180,
             borderRadius: "50%",
             overflow: "hidden",
-            border: "5px solid #b5a5fa",
-            boxShadow: "0 2px 28px #b5a5fa30",
+            border: "5px solid var(--color-primary)",
+            boxShadow: "0 0 35px var(--color-primary-hover)",
             background: "#28203c",
             display: "flex",
             alignItems: "center",
@@ -59,9 +61,10 @@ export default function Inicio() {
           fontSize: "clamp(2.5rem, 8vw, 4.3rem)",
           fontWeight: 800,
           textAlign: "center",
-          color: "#b5a5fa",
+          color: "#ffffff", /* Blanco puro para máximo contraste AAA */
           margin: "1.8rem 0 0 0",
           lineHeight: 1.2,
+          textShadow: "0 2px 10px rgba(0,0,0,0.3)",
         }}
       >
         Eval Samuel Molina Fuertes

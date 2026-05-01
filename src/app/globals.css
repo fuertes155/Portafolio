@@ -1,19 +1,48 @@
 :root {
+  --color-background-raw: #181824;
   --color-background: linear-gradient(to bottom right, #181824, #232335, #181824);
-  --color-bg-solid: #181824; /* Para casos donde no uses gradiente */
+  --color-bg-solid: #181824;
   --color-bg-card: #232335;
   --color-text: #ffffff;
-  --color-primary: #a78bfa; /* Morado principal/acento */
-  --color-primary-hover: #bfaaff;
-  --color-accent: #a78bfa; /* Puedes unificarlo con primary */
-  --color-muted: #a1a1aa;
-  --color-muted-2: #d1d5db;
-  --color-border: #2a2a2a;
+  --color-primary: #ddd6fe; /* Morado claro AAA (>7:1 sobre #181824) */
+  --color-primary-hover: #ede9fe;
+  --color-accent: #ddd6fe;
+  --color-muted: #d1d5db;
+  --color-muted-2: #e5e7eb;
+  --color-border: #3f3f46;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: var(--color-background);
+  background-color: #181824 !important; /* Forzar fondo sólido para validadores */
+  background: var(--color-background) !important;
   color: var(--color-text);
+  min-height: 100vh;
+}
+
+/* Ajustes responsive para el Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 1.2rem;
+    align-items: center !important;
+  }
+  .footer-section {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+  }
+  .footer-section-right {
+    text-align: center !important;
+    justify-content: center !important;
+  }
 }

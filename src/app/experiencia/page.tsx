@@ -59,7 +59,8 @@ export default function Experiencia() {
       style={{
         minHeight: "100vh",
         padding: "4rem 1rem 2rem",
-        background: "var(--color-background)",
+        backgroundColor: "#181824",
+        backgroundImage: "var(--color-background)",
         color: "var(--color-text)",
         display: "flex",
         flexDirection: "column",

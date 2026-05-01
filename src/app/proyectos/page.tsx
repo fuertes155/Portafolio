@@ -37,14 +37,15 @@ export default function Proyectos() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        background: "radial-gradient(ellipse 60% 60% at 50% 30%, #7c6dfa44 0%, #232335 70%, #1a1a1f 100%)",
+        backgroundColor: "#181824",
+        backgroundImage: "radial-gradient(ellipse 60% 60% at 50% 30%, #7c6dfa44 0%, #232335 70%, #1a1a1f 100%)",
       }}
     >
       <h2
         style={{
           fontSize: "2.7rem",
           fontWeight: 800,
-          color: "#a78bfa",
+          color: "var(--color-primary)",
           marginBottom: "2.5rem",
           letterSpacing: "-1.5px",
           textAlign: "center",
@@ -67,7 +68,7 @@ export default function Proyectos() {
           <div
             key={i}
             style={{
-              backgroundColor: "#232335",
+              backgroundColor: "var(--color-bg-card)",
               borderRadius: "1rem",
               overflow: "hidden",
               display: "flex",
@@ -100,7 +101,7 @@ export default function Proyectos() {
                     fontSize: "1.3rem",
                     fontWeight: 700,
                     marginBottom: "0.6rem",
-                    color: "#fff",
+                    color: "var(--color-text)",
                   }}
                 >
                   {proy.titulo}
@@ -108,7 +109,7 @@ export default function Proyectos() {
                 <p
                   style={{
                     fontSize: "1.07rem",
-                    color: "#a1a1aa",
+                    color: "var(--color-muted)",
                     marginBottom: "1.2rem",
                   }}
                 >
@@ -130,7 +131,7 @@ export default function Proyectos() {
                         padding: "0.3rem 0.95rem",
                         fontSize: "0.87rem",
                         borderRadius: "0.5rem",
-                        color: "#a78bfa",
+                        color: "var(--color-primary)",
                         fontWeight: 700,
                       }}
                     >
@@ -155,8 +156,8 @@ export default function Proyectos() {
                     display: "inline-block",
                     textAlign: "center",
                     background: "transparent",
-                    color: "#a78bfa",
-                    border: "2px solid #a78bfa",
+                    color: "var(--color-primary)",
+                    border: "2px solid var(--color-primary)",
                     borderRadius: "0.4rem",
                     padding: "0.82rem 1.8rem",
                     fontWeight: 700,
@@ -176,16 +177,17 @@ export default function Proyectos() {
 
       <button
         style={{
-          background: "#a78bfa",
-          color: "#fff",
+          backgroundColor: "var(--color-primary)",
+          color: "#181824", /* Texto oscuro sobre fondo claro para máximo contraste */
           border: "none",
           borderRadius: "0.3rem",
           padding: "1.05rem 2.5rem",
-          fontWeight: 700,
+          fontWeight: 800,
           fontSize: "1.1rem",
           cursor: "pointer",
-          boxShadow: "0 2px 10px rgba(167,139,250,0.08)",
-          margin: "0 auto",
+          boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
+          margin: "3rem auto 0",
+          display: "block",
         }}
         onClick={() => alert("¡Gracias por tu interés!")}
       >

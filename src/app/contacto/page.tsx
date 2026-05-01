@@ -42,11 +42,11 @@ export default function Contacto() {
             Información de Contacto
           </h3>
           {[{
-            icon: <Mail size={27} color="#a78bfa" />, label: "Email", value: "sam33mol4@gmail.com"
+            icon: <Mail size={27} color="var(--color-primary)" />, label: "Email", value: "sam33mol4@gmail.com"
           }, {
-            icon: <Phone size={27} color="#a78bfa" />, label: "Teléfono", value: "3158598604"
+            icon: <Phone size={27} color="var(--color-primary)" />, label: "Teléfono", value: "3158598604"
           }, {
-            icon: <MapPin size={27} color="#a78bfa" />, label: "Ubicación", value: "Pasto, Nariño"
+            icon: <MapPin size={27} color="var(--color-primary)" />, label: "Ubicación", value: "Pasto, Nariño"
           }].map((item, i) => (
             <div key={i} style={{ display: "flex", alignItems: "center", gap: "1.1rem", marginBottom: "1.4rem" }}>
               {item.icon}
@@ -64,33 +64,37 @@ export default function Contacto() {
               href="https://facebook.com/SamuelFuertes"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#a78bfa" }}
+              style={{ color: "var(--color-primary)" }}
+              aria-label="Facebook de Eval Samuel Molina"
             >
-              <Facebook size={28} />
+              <Facebook size={28} aria-hidden="true" />
             </a>
             <a
               href="https://instagram.com/molinafuertes"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#a78bfa" }}
+              style={{ color: "var(--color-primary)" }}
+              aria-label="Instagram de Eval Samuel Molina"
             >
-              <Instagram size={28} />
+              <Instagram size={28} aria-hidden="true" />
             </a>
             <a
               href="https://github.com/fuertes155"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#a78bfa" }}
+              style={{ color: "var(--color-primary)" }}
+              aria-label="GitHub de Eval Samuel Molina"
             >
-              <Github size={28} />
+              <Github size={28} aria-hidden="true" />
             </a>
             <a
               href="https://youtube.com/@samuelmolina-u3z"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#a78bfa" }}
+              style={{ color: "var(--color-primary)" }}
+              aria-label="YouTube de Eval Samuel Molina"
             >
-              <Youtube size={28} />
+              <Youtube size={28} aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -146,19 +150,20 @@ export default function Contacto() {
             <button
               type="submit"
               style={{
-                background: "var(--color-primary)",
-                color: "var(--color-text)",
+                backgroundColor: "var(--color-primary)",
+                color: "#181824", /* Texto oscuro sobre fondo claro */
                 border: "none",
                 borderRadius: "0.45rem",
                 padding: "1rem",
-                fontWeight: 700,
+                fontWeight: 800,
                 fontSize: "1.12rem",
                 cursor: "pointer",
                 marginTop: "0.6rem",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                gap: "0.8rem"
+                gap: "0.8rem",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.2)"
               }}
             >
               <Send size={20} /> Enviar Mensaje

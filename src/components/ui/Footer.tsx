@@ -14,6 +14,7 @@ export default function Footer() {
       }}
     >
       <div
+        className="footer-container"
         style={{
           maxWidth: "1300px",
           margin: "0 auto",
@@ -26,7 +27,7 @@ export default function Footer() {
         }}
       >
         {/* Nombre y rol */}
-        <div style={{ flex: "1 1 280px", minWidth: 250 }}>
+        <div className="footer-section" style={{ flex: "1 1 280px", minWidth: 250 }}>
           <h3 style={{ color: "var(--color-primary)", fontSize: "1.3rem", fontWeight: 800, marginBottom: 8 }}>
             Eval Samuel Molina Fuertes
           </h3>
@@ -35,6 +36,7 @@ export default function Footer() {
 
         {/* Frase motivacional */}
         <div
+          className="footer-section"
           style={{
             flex: "2 1 380px",
             minWidth: 290,
@@ -61,7 +63,7 @@ export default function Footer() {
         </div>
 
         {/* Redes sociales */}
-        <div style={{
+        <div className="footer-section footer-section-right" style={{
           flex: "1 1 200px",
           minWidth: 120,
           textAlign: "right"
@@ -69,30 +71,33 @@ export default function Footer() {
           <h4 style={{ fontSize: "1.09rem", fontWeight: 700, marginBottom: 8, color: "#fff" }}>
             Redes sociales
           </h4>
-          <div style={{ display: "flex", gap: "1.05rem", justifyContent: "flex-end" }}>
+          <div style={{ display: "flex", gap: "1.05rem", justifyContent: "flex-end" }} className="footer-section-right">
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#fff" }}
+              aria-label="LinkedIn de Eval Samuel Molina Fuertes"
             >
-              <Linkedin size={27} />
+              <Linkedin size={27} aria-hidden="true" />
             </a>
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#fff" }}
+              aria-label="GitHub de Eval Samuel Molina Fuertes"
             >
-              <Github size={27} />
+              <Github size={27} aria-hidden="true" />
             </a>
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#fff" }}
+              aria-label="Instagram de Eval Samuel Molina Fuertes"
             >
-              <Instagram size={27} />
+              <Instagram size={27} aria-hidden="true" />
             </a>
           </div>
         </div>

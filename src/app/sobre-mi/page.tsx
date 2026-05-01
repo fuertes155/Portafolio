@@ -11,11 +11,12 @@ export default function SobreMi() {
       id="sobre-mi"
       style={{
         minHeight: "100vh",
-        background: "var(--color-background)",
+        backgroundColor: "#181824",
+        backgroundImage: "var(--color-background)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "4rem 1rem 2rem 1rem",
+        padding: "4rem 1rem 2rem",
         boxSizing: "border-box",
       }}
     >
